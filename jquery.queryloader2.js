@@ -925,7 +925,7 @@ OverlayLoader.prototype.createOverlay = function () {
 	this.container = $("<div id='" + this.parent.options.overlayId + "'></div>").css({
 		width: "100%",
 		height: "100%",
-		backgroundColor: this.parent.options.backgroundColor,
+		backgroundColor: "#3B5999",
 		backgroundPosition: "fixed",
 		position: overlayPosition,
 		zIndex: 666999, //very high!
@@ -935,10 +935,19 @@ OverlayLoader.prototype.createOverlay = function () {
 
 	//create the loading bar
 	this.loadbar = $("<div id='qLbar'></div>").css({
-		height: this.parent.options.barHeight + "px",
+		height:"58px",
 		marginTop: "-" + (this.parent.options.barHeight / 2) + "px",
-		backgroundColor: this.parent.options.barColor,
+		backgroundColor: "white",
 		width: "0%",
+		position: "absolute",
+		top: "50%"
+	}).appendTo(this.container);
+
+	this.yncimage = $("<div id='yncimage'></div>").css({
+		height:"58px",
+		marginTop: "-" + (this.parent.options.barHeight / 2) + "px",
+		background: "url(images/bannerimage.png) transparent repeat",
+		width: "100%",
 		position: "absolute",
 		top: "50%"
 	}).appendTo(this.container);
@@ -955,7 +964,7 @@ OverlayLoader.prototype.createOverlay = function () {
 			marginTop: "-" + (59 + this.parent.options.barHeight) + "px",
 			textAlign: "center",
 			marginLeft: "-50px",
-			color: this.parent.options.barColor
+			color: "white"
 		}).appendTo(this.container);
 	}
 
