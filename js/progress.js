@@ -276,15 +276,15 @@ var bar_perc = Math.round(100 / image_count);
 	// Make the width of the bar wider so that it matches the percent
 
 
-	var bwidth = $('#bar').width();
+	/*var bwidth = $('#bar').width();
 	var bparentWidth = $('#bar').offsetParent().width();
 	var bpercent = 100*bwidth/bparentWidth; //current width in percent
 
 	$("#bar").animate({width: "+"+ (parseFloat(percent) - parseFloat(bpercent)) + "%"});
-	$("#nc").animate({width: "+"+ (parseFloat(percent) - parseFloat(bpercent)) + "%"});
+	$("#nc").animate({width: "+"+ (parseFloat(percent) - parseFloat(bpercent)) + "%"});*/
 
-	//document.getElementById('bar').style.width = percent + '%';
-	//document.getElementById('nc').style.width = percent + '%';
+	document.getElementById('bar').style.width = percent + '%';
+	document.getElementById('nc').style.width = percent + '%';
 
 
 	//checkstate(); // need for safari
