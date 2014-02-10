@@ -225,13 +225,13 @@ var bar_perc = Math.round(100 / image_count);
 		more = 0;  // reset more if we loaded next image 
 	
 	// The is so the percentage can never go past 100
-	if (percent > 100) { percent = 100; } // Bug fix from Martijn189 on 4/13/10
+	if (percent >= 100) { percent = 100; } // Bug fix from Martijn189 on 4/13/10
 	
 	// Write the new percent in the progress bar window
 	document.getElementById('percent').innerHTML = percent + '%';
 	// Make the width of the bar wider so that it matches the percent
-	document.getElementById('bar').style.width = new_width + '%';
-	document.getElementById('nc').style.width = new_width + '%';
+	document.getElementById('bar').style.width = percent + '%';
+	document.getElementById('nc').style.width = percent + '%';
 	
 	//checkstate(); // need for safari
 	//document.getElementById('bar').innerHTML = document.readyState;
