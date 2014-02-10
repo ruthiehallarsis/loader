@@ -962,7 +962,7 @@ OverlayLoader.prototype.createOverlay = function () {
 			fontSize: "3em",
 			top: "50%",
 			left: "50%",
-			marginTop: "-" + (59 + this.parent.options.barHeight) + "px",
+			marginTop: "50px",
 			textAlign: "center",
 			marginLeft: "-50px",
 			color: "white"
