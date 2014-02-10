@@ -935,7 +935,7 @@ OverlayLoader.prototype.createOverlay = function () {
 
 	//create the loading bar
 	this.loadbar = $("<div id='qLbar'></div>").css({
-		height:"58px",
+		height:"40px",
 		marginTop: "-" + (this.parent.options.barHeight / 2) + "px",
 		backgroundColor: "white",
 		width: "0%",
@@ -944,9 +944,10 @@ OverlayLoader.prototype.createOverlay = function () {
 	}).appendTo(this.container);
 
 	this.yncimage = $("<div id='yncimage'></div>").css({
-		height:"58px",
+		height:"40px",
 		marginTop: "-" + (this.parent.options.barHeight / 2) + "px",
 		background: "url(images/bannerimage.png) transparent repeat",
+		backgroundSize: "auto 100%",
 		width: "100%",
 		position: "absolute",
 		top: "50%"
