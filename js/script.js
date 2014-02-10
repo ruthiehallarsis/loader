@@ -4,7 +4,7 @@ $(document).ready(function () {
         backgroundColor: "#fff1b0",
         percentage: true,
         barHeight: 4,
-        //completeAnimation: "grow",
+        completeAnimation: "grow",
         minimumTime: 100
     });
 });
