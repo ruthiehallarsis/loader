@@ -78,12 +78,13 @@ function setup_bar()
 	screen.height and screen.width gives us the height and width
 	of the user's screen so that we can center the window in it. */
 
-	document.write('<div id="bar_wrapper" style="position: absolute;'
+	document.write('<div id="bar_wrapper" style="position: fixed;'
 		+ 'top: 0px;'
 		+ 'left: 0px;'
 		+ 'background: #3B5998;'
 		+ 'width: 100%;'
 		+ 'height: 100%;'
+		+ 'z-index:99;'
 		+ '">');
 
 	document.write('<div id="bar_window" style="position: absolute;'
