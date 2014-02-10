@@ -274,22 +274,8 @@ var bar_perc = Math.round(100 / image_count);
 	// Write the new percent in the progress bar window
 	document.getElementById('percent').innerHTML = percent + '%';
 	// Make the width of the bar wider so that it matches the percent
-	//document.getElementById('bar').style.width = percent + '%';
-
-	var b_width = $('#bar').width();
-	var parentWidth = $('#bar').offsetParent().width();
-	var currrent_width = 100*b_width/parentWidth;
-
-	var bb_percent = parseFloat(percent) - parseFloat(currrent_width);
-
-	var new_b_width = parseFloat(currrent_width) + parseFloat(bb_percent);
-
-
-	$('#bar').animate({'width': new_b_width + '%'}, 500);
-	document.getElementById('bar').style.width = new_b_width + '%';
-	//document.getElementById('nc').style.width = percent + '%';
-	$('#nc').animate({'width': new_b_width + '%'}, 500);
-	document.getElementById('nc').style.width = new_b_width + '%';
+	document.getElementById('bar').style.width = percent + '%';
+	document.getElementById('nc').style.width = percent + '%';
 	//checkstate(); // need for safari
 	//document.getElementById('bar').innerHTML = document.readyState;
 	
